@@ -2,6 +2,7 @@
 import flatpickr from "flatpickr";
 // Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // import { formats } from "flatpickr/dist/utils/formatting";
 
 const sec=document.querySelector('[data-seconds]')
@@ -25,10 +26,10 @@ const options = {
       
       if(dateInput>currentDay){
         buttonStart.disabled=false;
-        
+        inputEl.disabled=true;
       }
       else{
-         alert("Please choose a date in the future");
+        Notify.failure('Please choose a date in the future');
       }
         
       }
@@ -46,12 +47,8 @@ function onClick(){
         let inputTime=inputEl.value;
         
         const endDay=new Date(inputTime)
-        
-        console.log(endDay)
         const startDay=new Date()
-        console.log(startDay)
         const deltaTime=endDay-startDay;
-        console.log(deltaTime)
         
         const { days, hours, minutes, seconds }=convertMs(deltaTime);
     
@@ -60,8 +57,8 @@ function onClick(){
         hour.textContent=hours;
         day.textContent=days;
     
-        console.log(`'${days}':${hours}:${minutes}:${seconds}`)
-    
+        // console.log(`'${days}':${hours}:${minutes}:${seconds}`)
+        buttonStart.disabled=true;
         if(days==='00'  && hours==='00' && minutes==='00' && seconds==='00')
         {clearInterval(timerId);
             sec.textContent='00';
