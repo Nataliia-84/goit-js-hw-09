@@ -30,3 +30,13 @@ button{
 
 
 }
+
+.timer{
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+.field{
+  display: flex;
+  flex-direction: column;
+}
