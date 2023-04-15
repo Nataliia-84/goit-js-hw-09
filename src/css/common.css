@@ -10,6 +10,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  
 }
 
 img {
@@ -17,6 +18,31 @@ img {
   max-width: 100%;
 }
 
+
+.input_date{
+  color:red;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 6px 8px #c4b59d, 0 -2px 1px #fff;
+}
+.button_start{
+  margin-left: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 6px 8px #c4b59d, 0 -2px 1px #fff;
+}
+
+.value{
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  
+}
+.label{
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
 button{
   display: inline-flex;
   justify-content: center;
@@ -35,6 +61,7 @@ button{
   width: 400px;
   display: flex;
   justify-content: space-around;
+  
 }
 .field{
   display: flex;

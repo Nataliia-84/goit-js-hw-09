@@ -22,6 +22,7 @@ function onClickSubmit(event){
   const firstDelay=Number(formEl.elements.delay.value);
   const stepDelay=Number(formEl.elements.step.value);
   const amoutn=Number(formEl.elements.amount.value);
+
  
   for(let i=1, time=firstDelay;i<=amoutn;i+=1,time+=stepDelay){
   
